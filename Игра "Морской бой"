@@ -1,13 +1,16 @@
-#include <iostream>
-#include <stdlib.h>
-#include <string>
-#include <cmath>
-#include <random>
-#include <ctime>
-#include <limits>
-#include <windows.h>
-#include <conio.h>
+#include <iostream>   // Это стандартная библиотека ввода-вывода в C++
+#include <stdlib.h>   // Cодержит функции для работы с памятью, конвертации типов, управления процессом и др
+#include <string>     // Предоставляет класс std::string и связанные с ним функции для работы со строками.
+#include <cmath>      // Cодержит математические функции, такие как тригонометрические, логарифмические, показательные и др
+#include <random>     // Предоставляет функции и классы для генерации псевдослучайных чисел.
+#include <ctime>      // Содержит функции для работы с временем и датой.
+#include <limits>     // Определяет константы и типы, связанные с ограничениями чисел, такие как минимальное
+                      // и максимальное значение для определенных типов данных.
+#include <windows.h>  // Используется в операционных системах Windows и предоставляет функции для работы с API операционной системы
+#include <conio.h>    // Используется в операционных системах Windows и содержит функции для работы с консольным вводом-выводом
 
+
+// Определение и инициализация переменных
 int enShip4 = 1, enShip3 = 2, enShip2 = 3, enShip1 = 4;
 bool flag4 = true, flag3_1 = true, flag3_2 = true, flag2_1 = true, flag2_2 = true, flag2_3 = true, flag1_1 = true, flag1_2 = true, flag1_3 = true, flag1_4 = true;
 
@@ -31,6 +34,7 @@ int mx1_1_1, my1_1_1, mx1_1_2, my1_1_2, mx1_1_3, my1_1_3, mx1_1_4, my1_1_4;
 
 using namespace std;
 
+// Класс Кораблей
 class Ship
 {
 public:
@@ -42,6 +46,7 @@ public:
 	~Ship() {}
 };
 
+// Класс Поля
 class Field
 {
 public:
@@ -69,6 +74,7 @@ public:
 	~Field() {}
 };
 
+// Класс поля, которое принадлежит Игроку
 class PlayerField : public Field
 {
 public:
@@ -140,6 +146,7 @@ public:
 	~PlayerField() {}
 };
 
+// Класс поля, которое принадлежит Компьютеру (Противнику)
 class EnemyField : public Field
 {
 public:
